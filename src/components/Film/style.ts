@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const FilmContainer = styled.div`
+  display: flex;
+`;
+
 export const FilmData = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,4 +27,8 @@ export const Overview = styled.p`
 
 export const Popularity = styled.span`
   font-size: 1.5em;
+`;
+
+export const FilmPoster = styled.img`
+  display: block;
 `;

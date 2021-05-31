@@ -1,7 +1,15 @@
 import React from "react";
 
 import { IPreparedFilm } from "../../utils/types";
-import { FilmData, Title, MetaData, Overview, Popularity } from "./style";
+import {
+  FilmContainer,
+  FilmData,
+  Title,
+  MetaData,
+  Overview,
+  Popularity,
+  FilmPoster,
+} from "./style";
 
 export const Film: React.FC<IPreparedFilm> = ({
   poster_path,
@@ -13,8 +21,8 @@ export const Film: React.FC<IPreparedFilm> = ({
 }) => {
   return (
     <div>
-      <div style={{ display: "flex" }}>
-        <img src={poster_path} style={{ display: "block" }} alt="" />
+      <FilmContainer>
+        <FilmPoster src={poster_path} />
         <FilmData>
           <Title>{title}</Title>
           <MetaData>
@@ -24,7 +32,7 @@ export const Film: React.FC<IPreparedFilm> = ({
           <Overview>{overview}</Overview>
           <Popularity>Popularity: {popularity}</Popularity>
         </FilmData>
-      </div>
+      </FilmContainer>
     </div>
   );
 };
